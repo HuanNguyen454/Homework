@@ -4,7 +4,56 @@ using System.Collections.Generic;
 using System.Diagnostics;
 
 namespace LibraryManagementSystem
-{
+{    
+    // ======== BASIC ASSIGNMENT ========
+    
+    // TODO: Create the abstract base class LibraryItem with:
+    // - Properties: Id, Title, PublicationYear
+    // - Constructor that initializes these properties
+    // - Abstract method: DisplayInfo()
+    // - Virtual method: CalculateLateReturnFee(int daysLate) that returns decimal
+    //   with a basic implementation of daysLate * 0.50m
+    
+    // TODO: Create the IBorrowable interface with:
+    // - Properties: BorrowDate (DateTime?), ReturnDate (DateTime?), IsAvailable (bool)
+    // - Methods: Borrow(), Return()
+    
+    // TODO: Create the Book class that inherits from LibraryItem and implements IBorrowable
+    // - Add properties: Author, Pages, Genre
+    // - Implement all required methods from the base class and interface
+    // - Override CalculateLateReturnFee to return daysLate * 0.75m
+    
+    // TODO: Create the DVD class that inherits from LibraryItem and implements IBorrowable
+    // - Add properties: Director, Runtime (in minutes), AgeRating
+    // - Implement all required methods from the base class and interface
+    // - Override CalculateLateReturnFee to return daysLate * 1.00m
+    
+    // TODO: Create the Magazine class that inherits from LibraryItem
+    // - Add properties: IssueNumber, Publisher
+    // - Implement all required methods from the base class
+    // - Magazines don't need to implement IBorrowable (they typically can't be borrowed)
+    
+    // TODO: Create the Library class with:
+    // - A list to store LibraryItems
+    // - Methods: AddItem(), SearchByTitle(), DisplayAllItems()
+    
+    // ======== ADVANCED ASSIGNMENT ========
+    
+    // TODO (ADVANCED): Create a record type for tracking borrowing history
+    // - Include: ItemId, Title, BorrowDate, ReturnDate, BorrowerName
+    // - Add an init-only property: LibraryLocation
+    
+    // TODO (ADVANCED): Create an extension method for string
+    // - Create a method ContainsIgnoreCase() that checks if a string contains
+    //   another string, ignoring case sensitivity
+    
+    // TODO (ADVANCED): Create a generic collection to avoid boxing/unboxing
+    // - Create a class LibraryItemCollection<T> where T : LibraryItem
+    // - Implement methods: Add(), GetItem(), Count property
+    
+    // TODO (ADVANCED): Add ref parameter and ref return methods to the Library class
+    // - UpdateItemTitle method using ref parameter
+    // - GetItemReference method with ref return
     // ======== BASIC ASSIGNMENT ========
     
     // Abstract base class for library items
